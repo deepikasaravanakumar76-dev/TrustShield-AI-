@@ -13,7 +13,13 @@ function Phishing() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/phishing");
+      const response = await fetch("https://trustshield-backend-k5h5.onrender.com/phishing", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ url })
+      });
       const data = await response.json();
 
       setResult(data.result);
