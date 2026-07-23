@@ -15,7 +15,7 @@ function Hallucination() {
     try {
       const response = await fetch(
         
-"https://trustshield-backend-k5h5.onrender.com/hallucination"
+"https://trustshield-backend-k5h5.onrender.com/hallucination");
       
 
       const data = await response.json();
